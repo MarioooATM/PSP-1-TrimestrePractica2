@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="PSP-1-TrimestrePractica2" />
         <module name="PSP_Aplicacion2" />
       </profile>
     </annotationProcessing>
