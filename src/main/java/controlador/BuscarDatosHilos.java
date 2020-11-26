@@ -24,15 +24,11 @@ public class BuscarDatosHilos extends Thread{
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/BBDD_PSP_1", "DAM2020_PSP", "DAM2020_PSP");
             Statement consulta = conexion.createStatement();
-            System.out.println(numInicial+ "inicial");
-            System.out.println(numFinal+ "final");
             ResultSet registro = consulta.executeQuery("SELECT INGRESOS FROM Empleados WHERE id>="+numInicial+"&& id<="+numFinal);
             for (int x = numInicial; x <= numFinal; x++) {
                 registro.next();
                 monto += registro.getInt("INGRESOS");
-                System.out.println(monto+" Ha sido sumado por "+Thread.currentThread().getName());
             }
-            System.out.println(monto + "******");
             conexion.close();
         }catch (SQLException throwables) {
             throwables.printStackTrace();

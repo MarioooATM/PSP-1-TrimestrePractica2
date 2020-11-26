@@ -18,7 +18,7 @@ public class BuscarDatos {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        System.out.println(monto);
+        System.out.println("Total sueldo empleados: "+monto);
     }
     public int contarRegistros(){
         int numRegistros=0;
